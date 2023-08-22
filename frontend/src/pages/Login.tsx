@@ -58,7 +58,7 @@ const Label = styled.label`
         console.log("handleLogin called");
         try {
             // Make API request to backend login route
-            const response = await fetch("http://localhost:8000/login", {
+            const response = await fetch("http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

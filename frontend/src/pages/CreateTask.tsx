@@ -99,7 +99,7 @@ export default function CreateTask() {
 
         try {
             console.log(editedTask);
-            const response = await fetch("http://localhost:8000/tasks", {
+            const response = await fetch("http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/tasks", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

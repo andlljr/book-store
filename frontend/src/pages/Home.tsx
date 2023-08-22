@@ -52,7 +52,7 @@ export default function Home() {
 
     useEffect(() => {
         // Fetch tasks from the backend API
-        fetch(`http://localhost:8000/users/${userIdHeader}/tasks`)
+        fetch(`http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/users/${userIdHeader}/tasks`)
             .then(response => response.json())
             .then(data => setTasks(data.tasks))
             .catch(error => console.error("Error fetching tasks:", error));
@@ -60,7 +60,7 @@ export default function Home() {
 
     const handleDelete = async (taskId: number) => {
         try {
-            const response = await fetch(`http://localhost:8000/tasks/${taskId}`, {
+            const response = await fetch(`http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/tasks/${taskId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

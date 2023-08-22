@@ -98,7 +98,7 @@ export default function EditSettings() {
             password,
         };
 
-        fetch(`http://localhost:8000/users/${userId}`, {
+        fetch(`http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/users/${userId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

@@ -94,7 +94,7 @@ export default function EditTask() {
     const updateTask = async () => {
         try {
             console.log(taskId);
-            const response = await fetch(`http://localhost:8000/tasks/${taskId.id}`, {
+            const response = await fetch(`http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/tasks/${taskId.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

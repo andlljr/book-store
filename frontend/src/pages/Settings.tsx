@@ -97,7 +97,7 @@ export default function Settings() {
 
     const deleteAllTask = async() => {
         try {
-            const response = await fetch(`http://localhost:8000/tasks/user/${userIdHeader}`, {
+            const response = await fetch(`http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/tasks/user/${userIdHeader}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -112,7 +112,7 @@ export default function Settings() {
     const deleteAccount = async () => {
         try {
             deleteAllTask();
-            const response = await fetch(`http://localhost:8000/users/${userIdHeader}`, {
+            const response = await fetch(`http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/users/${userIdHeader}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -132,7 +132,7 @@ export default function Settings() {
     useEffect(() => {
         async function fetchUserData() {
             try {
-                const response = await fetch(`http://localhost:8000/users/${userIdHeader}`);
+                const response = await fetch(`http://ec2-3-238-33-251.compute-1.amazonaws.com:8000/users/${userIdHeader}`);
                 
                 if (response.ok) {
                     const data = await response.json();
